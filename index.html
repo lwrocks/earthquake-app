@@ -7,6 +7,7 @@
     <meta name="author" content="Laurel Wright" />
     <title>Earthquake App 2020</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/worldwide.png" type="image/x-icon" />
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
   </head>
@@ -21,17 +22,20 @@
       </ul>
     </nav>
     <main>
+      <section class="intro">
+        <p>This project displays the locations of where earthquakes have taken place over the past 24 hours.</p>
+      </section>
       <section class="earthquake-map">
         <div id="map">
           <script>
-            let earthquakeCenter = [-87.6297982, 41.8781136];
+            let earthquakeCenter = [-111.876183, 40.758701];
 
             mapboxgl.accessToken = "pk.eyJ1IjoibHdyb2NrcyIsImEiOiJja2dzZXR5MXcxMHIzMnFtbHo2emJiZmk2In0.M4pVEkejVPGN5rbnZWdxtg";
             var map = new mapboxgl.Map({
               container: "map",
-              style: "mapbox://styles/lwrocks/ckgsfb4fm1gbc19nvjkpoapvf",
+              style: "mapbox://styles/lwrocks/ckgsko9o117th19o4qia93cjs",
               center: earthquakeCenter,
-              zoom: 3,
+              zoom: 4,
             });
           </script>
         </div>
