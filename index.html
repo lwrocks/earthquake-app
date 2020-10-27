@@ -24,12 +24,14 @@
       <section class="earthquake-map">
         <div id="map">
           <script>
+            let earthquakeCenter = [-87.6297982, 41.8781136];
+
             mapboxgl.accessToken = "pk.eyJ1IjoibHdyb2NrcyIsImEiOiJja2dzZXR5MXcxMHIzMnFtbHo2emJiZmk2In0.M4pVEkejVPGN5rbnZWdxtg";
             var map = new mapboxgl.Map({
               container: "map",
-              style: "mapbox://styles/lwrocks/ckgsfb4fm1gbc19nvjkpoapvf", // stylesheet location
-              center: [-87.6297982, 41.8781136], // starting position [lng, lat]
-              zoom: 3, // starting zoom
+              style: "mapbox://styles/lwrocks/ckgsfb4fm1gbc19nvjkpoapvf",
+              center: earthquakeCenter,
+              zoom: 3,
             });
           </script>
         </div>
