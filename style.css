@@ -1,0 +1,23 @@
+/* Sen Extra Bold for Headings */
+@import url(https://fonts.googleapis.com/css2?family=Sen:wght@800&display=swap);
+
+/* Roboto Regular for Body Text */
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Sen", sans-serif;
+  font-size: 1.75rem;
+}
+
+#map {
+  width: 95vw;
+  height: 400px;
+}

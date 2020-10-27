@@ -7,11 +7,39 @@
     <meta name="author" content="Laurel Wright" />
     <title>Earthquake App 2020</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
   </head>
   <body>
+    <nav>
+      <h1 class="nav-header">Earthquake App</h1>
+      <ul class="nav-ul">
+        <li>About</li>
+        <li>Contribute</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
     <main>
-        <h1>Earthquake App</h1>
+      <section class="earthquake-map">
+        <div id="map">
+          <script>
+            mapboxgl.accessToken = "pk.eyJ1IjoibHdyb2NrcyIsImEiOiJja2dzZXR5MXcxMHIzMnFtbHo2emJiZmk2In0.M4pVEkejVPGN5rbnZWdxtg";
+            var map = new mapboxgl.Map({
+              container: "map",
+              style: "mapbox://styles/lwrocks/ckgsfb4fm1gbc19nvjkpoapvf", // stylesheet location
+              center: [-87.6297982, 41.8781136], // starting position [lng, lat]
+              zoom: 3, // starting zoom
+            });
+          </script>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="footer-text">
+        <p>Developed in 2020 with ❤️ by Laurel Wright</p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
