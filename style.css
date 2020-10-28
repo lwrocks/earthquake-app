@@ -4,20 +4,149 @@
 /* Roboto Regular for Body Text */
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 
+:root {
+  --primary-color: #605BEC;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+.theme-switch-wrapper {
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  margin-left: 80vw;
+}
+
+.theme-switch-wrapper p {
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 h1 {
   font-family: "Sen", sans-serif;
   font-size: 1.75rem;
+  color: var(--heading-color);
+}
+
+h2 {
+  font-family: "Sen", sans-serif;
+  font-size: 1.375rem;
+  color: var(--heading-color);
+}
+
+nav {
+  display: flex;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.nav-header {
+  padding-top: 10px;
+}
+
+.nav-ul {
+  display: flex;
+  margin-left: 45vw;
+}
+
+.nav-ul li {
+  list-style-type: none;
+  padding: 2vw;
+}
+
+.nav-ul a {
+  text-decoration: none;
 }
 
 #map {
   width: 100%;
   height: 67vh;
+}
+
+.feedback {
+  background-color: var(--primary-color);
+  padding: 6vw;
+}
+
+footer {
+  padding-top: 3vh;
+  height: 25vh;
+  background-color: var(--secondary-color);
+}
+
+footer p {
+  text-align: center;
+  padding-top: 7vh;
+  color: #fff;
 }

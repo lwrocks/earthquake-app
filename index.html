@@ -12,18 +12,29 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="theme-switch-wrapper">
+      <label for="checkbox" class="theme-switch">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <strong><p>Enable Dark Mode!</p></strong>
+    </div>
     <nav>
       <h1 class="nav-header">Earthquake App</h1>
       <ul class="nav-ul">
-        <li>About</li>
-        <li>Contribute</li>
-        <li>Blog</li>
-        <li>Contact</li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <main>
       <section class="intro">
-        <p>This project displays the locations of where earthquakes have taken place over the past 24 hours.</p>
+        <h1>Earthquake Data Analysis</h1>
+        <p>
+          This project displays the locations of where earthquakes have taken place over the past 24 hours. With this data we hope to
+          develop a solution that can warn residents of a specific area of an upcoming earthquake before it hits.
+        </p>
       </section>
       <section class="earthquake-map">
         <div id="map">
@@ -38,6 +49,26 @@
               zoom: 4,
             });
           </script>
+        </div>
+      </section>
+      <section class="feedback">
+        <h2>Feedback</h2>
+        <p>What features would you like to see us develop next? Use the form below to leave feedback!</p>
+        <div class="feedback-form-container">
+          <form action="#" method="POST" class="feedback-form">
+            <div class="name-input">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="email-input">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="message-input">
+              <label for="feedback">What would you like to see next?</label>
+              <textarea name="message" id="message" cols="50" rows="5"></textarea>
+            </div>
+          </form>
         </div>
       </section>
     </main>
